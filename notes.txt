@@ -20,5 +20,15 @@ if you don't want Duplicate entry data
 
 
 
-Has Many through
+Has Many through:
+
+access all post through user to Affiliation.
+    public function posts()
+    {
+        return $this->hasManyThrough(Post::class, User::class);
+    }
+Because the relation between user and post
+And table user has affiliation_id
+
+==============================================
 Polymorphic relations
