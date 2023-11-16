@@ -1,0 +1,24 @@
+
+One to one
+One to many
+Many to many:
+
+attach:
+    $post->tags()->attach(1);
+    $post->tags()->attach([1,2]);
+    $tag = Tag::first();
+    $post->tags()->attach($tag);
+
+if you don't want Duplicate entry data
+1) $table->primary(['post_id', 'tag_id']);
+
+
+
+    detach:
+
+
+
+
+
+Has Many through
+Polymorphic relations
